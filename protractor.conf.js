@@ -17,7 +17,7 @@ exports.config = {
     baseURL: 'http://localhost:8080/',
 
     cucumberOpts: {
-        require: 'tests/step_definitions/stepDefinitions.js',
+        require: 'tests/step_definitions/photosDefinitions.js',
         tags: false,
         format: 'pretty',
         profile: false,
