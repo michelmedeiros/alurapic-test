@@ -1,0 +1,49 @@
+[
+  {
+    "elements": [
+      {
+        "id": "use-functions-in-the-alurapic-main-page;filter-animals-in-the-main-page",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Filter animals in the main page",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I go to \"http://localhost:3000/fotos\"",
+            "result": {
+              "status": "undefined"
+            },
+            "line": 4
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I add \"Cachorro\" in the search field",
+            "result": {
+              "status": "undefined"
+            },
+            "line": 5
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "I should see results in the list",
+            "result": {
+              "status": "undefined"
+            },
+            "line": 6
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "use-functions-in-the-alurapic-main-page",
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Use functions in the Alurapic main page",
+    "tags": [],
+    "uri": "D:\\Git\\Alura\\alurapic-test\\tests\\features\\novaFoto.feature"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "description": "Filter animals in the main page",
+    "assertions": [
+      {
+        "passed": true
+      },
+      {
+        "passed": true
+      },
+      {
+        "passed": true
+      },
+      {
+        "passed": true
+      },
+      {
+        "passed": true
+      }
+    ],
+    "duration": 4215876036
+  }
+]

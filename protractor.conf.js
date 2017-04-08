@@ -14,10 +14,17 @@ exports.config = {
         'tests/features/*.feature'
     ],
 
-    baseURL: 'http://localhost:8080/',
+    resultJsonOutputFile: 'report.json',
+
+    baseURL: 'http://localhost:3030/',
 
     cucumberOpts: {
-        require: 'tests/step_definitions/photosDefinitions.js',
+        format: ['json:tests/reports/results.json', 'pretty'],
+        require: [
+            'tests/step_definitions/photosDefinitions.js',
+            'tests/support/hooks.js'
+        ],
+
         tags: false,
         format: 'pretty',
         profile: false,
