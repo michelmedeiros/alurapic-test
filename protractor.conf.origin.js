@@ -21,7 +21,7 @@ exports.config = {
     cucumberOpts: {
         format: ['json:tests/reports/results.json', 'pretty'],
         require: [
-            'tests/step_definitions/photosDefinitions.js',
+            'tests/features/step_definitions/**/*.js',
             'tests/support/hooks.js'
         ],
 
