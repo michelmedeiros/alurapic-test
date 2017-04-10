@@ -14,6 +14,9 @@ function onError(err) {
   this.emit('end');
 }
 
+
+
+
 gulp.task('test', ()=>
 {
   var params = process.argv;
@@ -30,46 +33,18 @@ gulp.task('test', ()=>
     .on('error', onError);
 });
 
-// gulp.task('test:login', ()=>
-// {
-//   return gulp.src(['./tests/features/login.feature'])
-//     .pipe(protractor({
-//       configFile: './protractor.config.js'
-//     }))
-//     .on('error', onError);
-// });
 
-// gulp.task('test:atendimento', ()=>
-// {
-//   return gulp.src(['./tests/features/atendimento.feature'])
-//     .pipe(protractor({
-//       configFile: './protractor.config.js'
-//     }))
-//     .on('error', onError);
-// });
-
-// gulp.task('test:demais-ajustes', ()=>
-// {
-//   return gulp.src(['tests/features/demais-ajustes.feature'])
-//     .pipe(protractor({
-//       configFile: './protractor.config.js'
-//     }))
-//     .on('error', onError);
-// });
-
-// gulp.task('generateReport', ['test'], ()=>
-// {
-//   return gulp.src('./tests/cucumber_report.json')
-//     .pipe(protractorReport({
-//         dest: 'tests_result/'
-//     }))
-//     .on('error', onError)
-//     .on('end', function(e){
-//       console.log("Cucumber end to end tests is completed.");
-//     });
-// });
-
-// gulp.task('e2e', ['generateReport'])
+gulp.task('generateReport', ['test'], ()=>
+{
+  return gulp.src('./tests/cucumber_report.json')
+    .pipe(protractorReport({
+        dest: 'tests_result/'
+    }))
+    .on('error', onError)
+    .on('end', function(e){
+      console.log("Cucumber end to end tests is completed.");
+    });
+});
 
 gulp.task('copy', ['clean'], function(){
   return gulp.src([
@@ -82,15 +57,7 @@ gulp.task('clean', function(){
   return del('dist/**');
 });
 
-// gulp.task('login:js', ['copy'], function(){
-//   return gulp.src([
-//     '/public/app/login/**.js'
-//   ])
-//   .pipe(jshint())
-//   .pipe(jshint.reporter('default'))
-//   .pipe(uglify())
-//   .pipe(gulp.dest('/dist/public/app/login/'));
-// });
+gulp.task('e2e', ['generateReport'])
 
 function runCommand(command) {
   return function (cb) {
@@ -102,7 +69,5 @@ function runCommand(command) {
   }
 }
 
-gulp.task('default', ['test']);
+gulp.task('default', ['e2e']);
 
-//deploy
-// gulp.task('deploy', ['login:js']);

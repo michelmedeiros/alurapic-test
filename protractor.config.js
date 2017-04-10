@@ -61,8 +61,8 @@ exports.config = {
 
     //Configurações do Cucumber
     cucumberOpts: {
-        require: ['tests/step_definitions/photosDefinitions.js'],
-        format: 'pretty',
+        require: ['tests/support/hooks.js', 'tests/step_definitions/photosDefinitions.js'],
+        format: 'json:./tests/cucumber_report.json',
         tags: ['@Automatizar']
     }
 };
