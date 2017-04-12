@@ -12,6 +12,12 @@ module.exports = function() {
         alurapicPage.go(site);
     });
 
+    this.Given(/^I go to no\-angular "([^"]*)"$/, function (site, callback) {
+         browser.ignoreSynchronization = true;
+         browser.get(site);
+         callback();
+       });
+
     this.When(/^I add "([^"]*)" in the search field$/, function(arg) {
         console.log('I search to site: ' + arg);
         alurapicPage.addFilter(arg);

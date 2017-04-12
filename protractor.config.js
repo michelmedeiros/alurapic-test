@@ -19,8 +19,18 @@ exports.config = {
 
     ignoreUncaughtExceptions: true, //para protractor 4.0 nao parar de executar quando ocorre erro.
 
+    // capabilities: {
+    //     'browserName': 'chrome'
+    // },
+
     capabilities: {
-        'browserName': 'chrome'
+      'browserName': 'phantomjs',
+      'phantomjs.binary.path': './node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs.exe',
+      'phantomjs.ghostdriver.cli.args': [
+        '--loglevel=DEBUG',
+        '--ignore-ssl-errors=true',
+        '--web-security=false'
+        ]
     },
 
     //Caminho dos arquivos features
