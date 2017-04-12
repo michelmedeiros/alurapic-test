@@ -27,57 +27,27 @@
             "keyword": "Given ",
             "result": {
               "status": "passed",
-              "duration": 6844445
-            },
-            "match": {}
-          },
-          {
-            "name": "I go to no-angular \"http://google.com.br\"",
-            "line": 5,
-            "keyword": "And ",
-            "result": {
-              "status": "passed",
-              "duration": 1491358
-            },
-            "match": {}
-          },
-          {
-            "name": "I go to \"github.com website\"",
-            "line": 6,
-            "keyword": "And ",
-            "result": {
-              "status": "passed",
-              "duration": 1270913
+              "duration": 6849185
             },
             "match": {}
           },
           {
             "name": "I add \"Cachorro\" in the search field",
-            "line": 7,
+            "line": 5,
             "keyword": "When ",
             "result": {
               "status": "passed",
-              "duration": 6336000
+              "duration": 2975210
             },
             "match": {}
           },
           {
             "name": "I should see results in the list",
-            "line": 8,
+            "line": 6,
             "keyword": "Then ",
             "result": {
               "status": "passed",
-              "duration": 5930272
-            },
-            "match": {}
-          },
-          {
-            "keyword": "After ",
-            "hidden": true,
-            "result": {
-              "status": "failed",
-              "duration": 5015324839,
-              "error_message": "Error: Step timed out after 5000 milliseconds\n    at ontimeout (timers.js:365:14)\n    at tryOnTimeout (timers.js:237:5)\n    at Timer.listOnTimeout (timers.js:207:5)"
+              "duration": 1854420
             },
             "match": {}
           }

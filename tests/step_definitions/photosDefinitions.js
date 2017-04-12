@@ -12,12 +12,6 @@ module.exports = function() {
         alurapicPage.go(site);
     });
 
-    this.Given(/^I go to no\-angular "([^"]*)"$/, function (site, callback) {
-         browser.ignoreSynchronization = true;
-         browser.get(site);
-         callback();
-       });
-
     this.When(/^I add "([^"]*)" in the search field$/, function(arg) {
         console.log('I search to site: ' + arg);
         alurapicPage.addFilter(arg);
@@ -28,13 +22,11 @@ module.exports = function() {
         fotos.get(0).getText().then(function(text) {
             expect(text).to.contain('Cachorro');
         });
-        expect(fotos).to.eventually.have.length(1);
         callback();
     });
 
     this.Then(/^I should see result graphic payment: "([^"]*)"$/, function(label, callback) {
         expect(alurapicPage.getLabelGraficoFaturamento()).to.eventually.equal(label).notify(callback);
-
     });
 
 };
